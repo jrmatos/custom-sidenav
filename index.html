@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 	<head>
 		<title>SIDENAV COMPONENT</title>
 		<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
 
 		<link rel="stylesheet" href="src/modules/sidenav-component/sidenav.css">
 	</head>
-	<body  ng-app="sidenav-component">
-		<a ui-sref="hello" ui-sref-active="active">Hello</a>
-		<a ui-sref="about" ui-sref-active="active">About</a>
+	<body ng-controller="HomeCtrl as vm">
 
 		<div layout-fill flex layout="row">
 			<!-- Menu -->
-			<custom-sidenav></custom-sidenav>
+			<custom-sidenav
+				options="vm.sidenavOptions">
+			</custom-sidenav>
 			<!-- /Menu -->
 			<!-- Main content -->
-			<md-content layout="column" layout-fill flex style="background-color:white" ng-click="vm.closeMenu()">
+			<md-content layout="column" layout-fill flex>
 				<div ui-view layout-fill flex></div>
 			</md-content>
 			<!-- /Main content -->
@@ -32,8 +32,7 @@
 		<!-- app scripts -->
 		<script type="text/javascript" src="src/app.js"></script>
 		<script type="text/javascript" src="src/domhelper.js"></script>
-		<script type="text/javascript" src="src/modules/sidenav-component/sidenavCtrl.js"></script>
-		<script type="text/javascript" src="src/modules/sidenav-component/sidenavDirective.js"></script>
+		<script type="text/javascript" src="src/modules/sidenav-component/sidenav.js"></script>
 		
 	</body>
 </html>

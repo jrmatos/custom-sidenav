@@ -1,16 +1,16 @@
 <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left"
             style="width: 350px; height: 100%" md-is-locked-open="true">
-    <md-content ng-controller="SidenavCtrl as vm" ng-cloak layout-fill id="menu-wrapper">
-        <h1 id="supplychain-title-menu" ng-click="vm.btnMenuClick()">
-            <span>Supply Chain 2</span>
-            <img ng-src="{{ 'src/assets/img/' + (vm.canOpenMenu ? 'menu_arrow_right_white.svg' : 'menu_arrow_left_white.svg')  }}" ng-show="menuItemLevel1.itemIcon">
+    <md-content ng-cloak layout-fill id="menu-wrapper">
+        <h1 id="supplychain-title-menu" ng-click="vm.toggleMenu()">
+            <span>{{vm.options.menuTitleText}}</span>
+            <img ng-src="{{ vm.options.iconsPackageUrl + (vm.canOpenMenu ? vm.options.menuTitleArrow.right : vm.options.menuTitleArrow.left)  }}">
         </h1>
 
 
         <md-list style="font-size: 16px;" layout-align="center" layout="column" id="main-menu">
 
             <!-- menu level 1 items -->
-            <span ng-repeat="menuItemLevel1 in vm.sideMenu.items">
+            <span ng-repeat="menuItemLevel1 in vm.options.items">
 
                 <!-- menu level 1 items -->
                 <md-list-item layout="row"
@@ -20,14 +20,14 @@
 
                     <!-- icon -->
                     <md-icon layout="row">
-                        <img ng-src="{{ 'src/assets/img/' + menuItemLevel1.itemIcon }}" ng-show="menuItemLevel1.itemIcon">
+                        <img ng-src="{{ vm.options.iconsPackageUrl + menuItemLevel1.itemIcon }}" ng-show="menuItemLevel1.itemIcon">
                     </md-icon>
 
                     <!-- label -->
                     <p layout="row">{{menuItemLevel1.label}}</p>
 
                     <span class="arrow-menu" ng-click="menuItemLevel1.click(menuItemLevel1)">
-                      <img src="src/assets/img/arrow_right.svg">
+                      <img ng-src="{{vm.options.iconsPackageUrl  + 'arrow_right.svg'}}">
                     </span>
 
                 </md-list-item>
@@ -52,7 +52,7 @@
                             <p layout="row">{{menuItemLevel2.label}}</p>
 
                             <span class="arrow-menu" ng-click="menuItemLevel1.click(menuItemLevel2)">
-                                <img src="src/assets/img/arrow_right.svg">
+                                <img ng-src="{{vm.options.iconsPackageUrl + 'arrow_right.svg'}}">
                             </span>
 
                         </md-list-item>
