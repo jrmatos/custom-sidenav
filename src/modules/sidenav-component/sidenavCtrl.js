@@ -24,7 +24,7 @@
 
 		vm.canOpenMenu = true;
 
-		// vm.state = angular.copy($state.current.name);
+		vm.state = angular.copy($state.current.name);
 
 		// vm.toggleSidenav = function (menuId) {
 		// 	$mdSidenav(menuId).toggle();
@@ -75,36 +75,36 @@
 		// }
 
 
-		// /*
-		// * This function is used for finding sub items and select them with a border in their parent.
-		// * It also removes this border for those ones who are not selected anymore
-		// */
-		// var checkSelectedChildren = (function _f() {
-		// 	$timeout(function () {
-		// 		// remove blue border from any eventual selected parent with submenu
-		// 		if(DOMHelper('.has-submenu-selected')) {
-		// 			DOMHelper('.has-submenu-selected').removeClass('has-submenu-selected');
-		// 		}
+		/*
+		* This function is used for finding sub items and select them with a border in their parent.
+		* It also removes this border for those ones who are not selected anymore
+		*/
+		var checkSelectedChildren = (function _f() {
+			$timeout(function () {
+				// remove blue border from any eventual selected parent with submenu
+				if(DOMHelper('.has-submenu-selected')) {
+					DOMHelper('.has-submenu-selected').removeClass('has-submenu-selected');
+				}
 
-		// 		// add border to any eventual parent who has menu
-		// 		if(document.querySelector('.submenu-selected')) {
-		// 			document.querySelector('.submenu-selected').parentNode.parentNode.previousElementSibling.classList.add('has-submenu-selected');
-		// 		}
+				// add border to any eventual parent who has menu
+				if(document.querySelector('.submenu-selected')) {
+					document.querySelector('.submenu-selected').parentNode.parentNode.previousElementSibling.classList.add('has-submenu-selected');
+				}
 
-		// 		if(document.querySelector('.submenu2-selected')) {
-		// 			document.querySelector('.submenu2-selected').parentNode.parentNode.parentNode.previousElementSibling.classList.add('has-submenu-selected');
-		// 		}
-		// 	}, 50);
-		// 	return _f;
-		// })();
+				if(document.querySelector('.submenu2-selected')) {
+					document.querySelector('.submenu2-selected').parentNode.parentNode.parentNode.previousElementSibling.classList.add('has-submenu-selected');
+				}
+			}, 50);
+			return _f;
+		})();
 
-		// $rootScope.$on('closeMenuBroadcast', function () {
-		// 	if(!vm.canOpenMenu && DOMHelper('md-sidenav').hasClass('sidenav-opened')) {
-		// 		vm.sideMenu.collapseChildren(vm.sideMenu.items);
-		// 		DOMHelper('md-sidenav').removeClass('sidenav-opened');
-		// 		vm.canOpenMenu = true;
-		// 	}
-		// });
+		$rootScope.$on('closeMenuBroadcast', function () {
+			if(!vm.canOpenMenu && DOMHelper('md-sidenav').hasClass('sidenav-opened')) {
+				vm.sideMenu.collapseChildren(vm.sideMenu.items);
+				DOMHelper('md-sidenav').removeClass('sidenav-opened');
+				vm.canOpenMenu = true;
+			}
+		});
 
 		vm.btnMenuClick = function(){
 			// close menu
@@ -122,10 +122,10 @@
 			}
 		};
 
-		// $rootScope.$on('$stateChangeStart', function(e, toState) {
-		// 	vm.state = toState.name;
-		// 	checkSelectedChildren();
-		// });
+		$rootScope.$on('$stateChangeStart', function(e, toState) {
+			vm.state = toState.name;
+			checkSelectedChildren();
+		});
 
 		// $rootScope.$on('$stateChangeError', function () {
 		// 	CustomToastService.show('Você está offline. Algumas funcionalidades podem não funcionar normalmente',
@@ -197,28 +197,28 @@
 						items: [
 							{
 								label: 'Produto Acabado',
-								state: 'about',
+								steate: 'jovem',
 								click: function (object) {
 									vm.sideMenu.navigateTo(this.state);
 								}
 							},
 							{
 								label: 'Item',
-								state: 'about',
+								steate: 'jovem',
 								click: function (object) {
 									vm.sideMenu.navigateTo(this.state);
 								}
 							},
 							{
 								label: 'Processo e Confirmação',
-								state: 'about',
+								steate: 'jovem',
 								click: function (object) {
 									vm.sideMenu.navigateTo(this.state);
 								}
 							},
 							{
 								label: 'Critical Parts',
-								state: 'about',
+								steate: 'jovem',
 								click: function (object) {
 									vm.sideMenu.navigateTo(this.state);
 								}
@@ -229,7 +229,7 @@
 				{
 					label: 'Supply demand',
 					itemIcon: 'productdev.svg',
-					state: 'about',
+					steate: 'jovem',
 					click: function (object) {
 						vm.sideMenu.navigateTo(this.state);
 					}
@@ -244,14 +244,14 @@
 						items: [
 							{
 								label: 'Atualização',
-								state: 'about',
+								steate: 'jovem',
 								click: function (object) {
 									vm.sideMenu.navigateTo(this.state);
 								}
 							},
 							{
 								label: 'Relatorio',
-								state: 'about',
+								steate: 'jovem',
 								click: function (object) {
 									vm.sideMenu.navigateTo(this.state);
 								}
@@ -269,49 +269,49 @@
 						items: [
 							{
 								label: 'Despesas Logísticas',
-								state: 'about',
+								steate: 'jovem',
 								click: function (object) {
 									vm.sideMenu.navigateTo(this.state);
 								}
 							},
 							{
 								label: 'Tabela Siscomex',
-								state: 'about',
+								steate: 'jovem',
 								click: function (object) {
 									vm.sideMenu.navigateTo(this.state);
 								}
 							},
 							{
 								label: 'Capatazia',
-								state: 'about',
+								steate: 'jovem',
 								click: function (object) {
 									vm.sideMenu.navigateTo(this.state);
 								}
 							},
 							{
 								label: 'Agente de Carga',
-								state: 'about',
+								steate: 'jovem',
 								click: function (object) {
 									vm.sideMenu.navigateTo(this.state);
 								}
 							},
 							{
 								label: 'Pagamentos EADI',
-								state: 'about',
+								steate: 'jovem',
 								click: function (object) {
 									vm.sideMenu.navigateTo(this.state);
 								}
 							},
 							{
 								label: 'Reembolso',
-								state: 'about',
+								steate: 'jovem',
 								click: function (object) {
 									vm.sideMenu.navigateTo(this.state);
 								}
 							},
 							{
 								label: 'Relatórios',
-								state: 'about',
+								steate: 'jovem',
 								click: function (item) {
 									vm.sideMenu.collapseToggle(item);
 								},
@@ -319,28 +319,28 @@
 									items: [
 										{
 											label: 'Custo Mensal',
-											state: 'about',
+											steate: 'jovem',
 											click: function (object) {
 												vm.sideMenu.navigateTo(this.state);
 											}
 										},
 										{
 											label: 'Parameterization',
-											state: 'about',
+											steate: 'jovem',
 											click: function (object) {
 												vm.sideMenu.navigateTo(this.state);
 											}
 										},
 										{
 											label: 'Storage Time',
-											state: 'about',
+											steate: 'jovem',
 											click: function (object) {
 												vm.sideMenu.navigateTo(this.state);
 											}
 										},
 										{
 											label: 'Process By Freight',
-											state: 'about',
+											steate: 'jovem',
 											click: function (object) {
 												vm.sideMenu.navigateTo(this.state);
 											}
@@ -354,8 +354,8 @@
                 {
                     label: 'Macro Execution',
                     itemIcon: 'macro-menu.svg',
-                    state: 'about',
-                    click: function (object) {
+                    state: 'bob',
+                    click: function () {
                         vm.sideMenu.navigateTo(this.state);
                     }
                 },
@@ -369,28 +369,28 @@
                         items: [
                             {
                                 label: 'Controle de E&O',
-                                state: 'about',
+                                steate: 'jovem',
                                 click: function (object) {
                                     vm.sideMenu.navigateTo(this.state);
                                 }
                             },
                             {
                                 label: 'Pareto',
-                                state: 'about',
+                                steate: 'jovem',
                                 click: function (object) {
                                     vm.sideMenu.navigateTo(this.state);
                                 }
                             },
                             {
                                 label: 'Improvement Plan',
-                                state: 'about',
+                                steate: 'jovem',
                                 click: function (object) {
                                     vm.sideMenu.navigateTo(this.state);
                                 }
                             },
                             {
                                 label: 'Relatórios',
-                                state: 'about',
+                                steate: 'jovem',
                                 click: function (item) {
                                     vm.sideMenu.collapseToggle(item);
                                 },
@@ -398,7 +398,7 @@
                                     items: [
                                         {
                                             label: 'Relatório 4Q',
-                                            state: 'about',
+                                            steate: 'jovem',
                                             click: function (object) {
                                                 vm.sideMenu.navigateTo(this.state);
                                             }
@@ -411,10 +411,6 @@
                 }
 			]
 		};
-
-		// $mdSidenav('left').onClose(function () {
-		// 	vm.sideMenu.collapseChildren(vm.sideMenu.items);
-		// });
 
 	}
 })();

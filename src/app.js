@@ -23,8 +23,16 @@
 			template: '<h3>Its the UI-Router hello world app!</h3>'
 		}
 
+		var bob = {
+			name: 'bob',
+			url: '/bob',
+			template: '<h3>Spongebob!</h3>'
+		}
+
+
 		$stateProvider.state(helloState);
 		$stateProvider.state(aboutState);
+		$stateProvider.state(bob);
 
 		 $qProvider.errorOnUnhandledRejections(false);
 	});
