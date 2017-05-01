@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>4B258606-6164-4262-AA91-B1147DF28358</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="677.41358" y="154" width="730.300889" height="728" rx="3"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="730.300889" height="728" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01.1---Fltro-dentro-do-upload-Copy-5" transform="translate(-1358.000000, -178.000000)">
+            <g id="Group-6-Copy" transform="translate(56.000000, 64.000000)">
+                <g id="Group-2-Copy">
+                    <rect id="Rectangle-3-Copy-9" x="0" y="0" width="1384.50213" height="845"></rect>
+                </g>
+            </g>
+            <use id="Rectangle-25-Copy" stroke="#DBE1E9" mask="url(#mask-2)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <path d="M1364.28571,192.285714 L1362,192.285714 L1362,198 L1367.71429,198 L1367.71429,195.714286 L1364.28571,195.714286 L1364.28571,192.285714 L1364.28571,192.285714 Z M1362,187.714286 L1364.28571,187.714286 L1364.28571,184.285714 L1367.71429,184.285714 L1367.71429,182 L1362,182 L1362,187.714286 L1362,187.714286 Z M1375.71429,195.714286 L1372.28571,195.714286 L1372.28571,198 L1378,198 L1378,192.285714 L1375.71429,192.285714 L1375.71429,195.714286 L1375.71429,195.714286 Z M1372.28571,182 L1372.28571,184.285714 L1375.71429,184.285714 L1375.71429,187.714286 L1378,187.714286 L1378,182 L1372.28571,182 L1372.28571,182 Z" id="Fill-202" fill="#5C6071"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,97 @@
+<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left"
+            style="width: 350px; height: 100%" md-is-locked-open="true">
+    <md-content ng-controller="SidenavCtrl as vm" ng-cloak layout-fill id="menu-wrapper">
+        <h1 id="supplychain-title-menu" ng-click="vm.btnMenuClick()">
+            <span>Supply Chain 2</span>
+            <img ng-src="{{ 'src/assets/img/' + (vm.canOpenMenu ? 'menu_arrow_right_white.svg' : 'menu_arrow_left_white.svg')  }}" ng-show="menuItemLevel1.itemIcon">
+        </h1>
+
+
+        <md-list style="font-size: 16px;" layout-align="center" layout="column" id="main-menu">
+
+            <!-- menu level 1 items -->
+            <span ng-repeat="menuItemLevel1 in vm.sideMenu.items">
+
+                <!-- menu level 1 items -->
+                <md-list-item layout="row"
+                              title="{{menuItemLevel1.label}}"
+                              ng-click="menuItemLevel1.click(menuItemLevel1)"
+                              ng-class="{ 'has-submenu': menuItemLevel1.menu, 'menu-expanded': menuItemLevel1.expanded, 'menu-selected': menuItemLevel1.state == vm.state }" class="menu-selected-hover">
+
+                    <!-- icon -->
+                    <md-icon layout="row">
+                        <img ng-src="{{ 'src/assets/img/' + menuItemLevel1.itemIcon }}" ng-show="menuItemLevel1.itemIcon">
+                    </md-icon>
+
+                    <!-- label -->
+                    <p layout="row">{{menuItemLevel1.label}}</p>
+
+                    <span class="arrow-menu" ng-click="menuItemLevel1.click(menuItemLevel1)">
+                      <img src="src/assets/img/arrow_right.svg">
+                    </span>
+
+                </md-list-item>
+                <!-- /menu level 1 items -->
+
+                <!-- menu level 2 -->
+                <md-list layout-align="center"
+                         layout="column"
+                         class="submenu submenu-level1"
+
+                         ng-show="menuItemLevel1.menu &&
+                                  menuItemLevel1.expanded">
+
+                    <!-- menu level 2 items -->
+                    <span ng-repeat="menuItemLevel2 in menuItemLevel1.menu.items">
+
+                        <md-list-item   title="{{menuItemLevel2.label}}"
+                                        ng-click="menuItemLevel2.click(menuItemLevel2)"
+                                        ng-class="{ 'menu-expanded': menuItemLevel2.expanded, 'has-submenu': menuItemLevel2.menu, 'submenu-selected': menuItemLevel2.state == vm.state }">
+
+                            <!-- label -->
+                            <p layout="row">{{menuItemLevel2.label}}</p>
+
+                            <span class="arrow-menu" ng-click="menuItemLevel1.click(menuItemLevel2)">
+                                <img src="src/assets/img/arrow_right.svg">
+                            </span>
+
+                        </md-list-item>
+
+
+                        <!-- menu level 3 -->
+                        <md-list layout-align="center"
+                                 layout="column"
+                                 class="submenu submenu-level2"
+                                 ng-show="menuItemLevel2.menu && menuItemLevel2.expanded">
+
+
+                            <md-list-item title="{{menuItemLevel3.label}}"
+                                          ng-click="menuItemLevel3.click(menuItemLevel3)"
+                                          ng-repeat="menuItemLevel3 in menuItemLevel2.menu.items"
+                                          ng-class="{'submenu2-selected': menuItemLevel3.state == vm.state}">
+
+                                <p layout="row">{{menuItemLevel3.label}}</p>
+
+                            </md-list-item>
+
+
+                        </md-list>
+                        <!-- /menu level 3 -->
+
+                    </span>
+                     <!-- /menu level 2 items -->
+
+
+                </md-list>
+                <!-- /menu level 2 -->
+
+                
+                
+            </span ng-repeat-end>
+            <!-- /menu level 1 items -->
+
+
+        </md-list>
+
+    </md-content>
+</md-sidenav>

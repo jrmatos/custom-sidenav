@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="59px" viewBox="0 0 72 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>9BA97729-3CF9-4C8A-8A10-30816DB6F2A5</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00.1---ESTRUTURA-QMS---NAVBAR-E-ÍCONES" transform="translate(-961.000000, -288.000000)">
+            <g id="Group-3" transform="translate(961.000000, 288.000000)">
+                <g id="Group-11">
+                    <g id="Group-4" transform="translate(8.000000, 10.000000)">
+                        <g id="Group-74" transform="translate(13.000000, 9.000000)" stroke="#4E546C">
+                            <path d="M0,1 L17.3338321,1" id="Path-24"></path>
+                            <path d="M0,8 L17.3338321,8" id="Path-24-Copy"></path>
+                            <path d="M0,15 L17.3338321,15" id="Path-24-Copy-2"></path>
+                            <path d="M0,22 L17.3338321,22" id="Path-24-Copy-3"></path>
+                        </g>
+                        <g id="Group-76" transform="translate(42.454518, 25.046607) rotate(-9.000000) translate(-42.454518, -25.046607) translate(30.954518, 13.546607)" stroke="#50566E">
+                            <polygon id="Path-25" points="8.83049168 20.843589 12.4251609 15.4420755 19.679426 22.6405821 22.8745822 19.2874398 15.5871428 11.8835215 21.2386167 8.64577364 0.545454545 0.313432836"></polygon>
+                        </g>
+                        <path d="M37.9455856,17.3479713 L37.9455856,11.7419153 L26.3188503,0.115180041 L10.094036,0.115180041 C7.88780661,0.115180041 6.09930433,1.91310309 6.09930433,4.11568394 L6.09930433,35.5718526 C6.09930433,37.7812699 7.88493398,39.5723565 10.0928249,39.5723565 L33.6375548,39.5723565 C35.8431153,39.5723565 37.6310754,37.7791729 37.6310754,35.5745578 L37.6310754,28.4115069" id="Path-2" stroke="#50566E"></path>
+                        <g id="Group-73" transform="translate(0.000000, 25.000000)">
+                            <rect id="Rectangle-36" fill="#65ACFF" x="0" y="1" width="25" height="10" rx="2"></rect>
+                            <text id="XLS" font-family="Roboto-Medium, Roboto" font-size="9" font-weight="400" fill="#FFFFFF">
+                                <tspan x="4.37890625" y="9">XLS</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

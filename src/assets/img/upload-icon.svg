@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="18px" viewBox="0 0 26 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>02CED4BD-7B5E-4603-8BEF-B5AE0FFECDD2</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.949019608   0 0 0 0 0.949019608   0 0 0 0 0.949019608  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="18_3_Logist-Tool---Follow-UP---Navbar-Expandida_com_Filtro_Expandido-Copy" transform="translate(-553.000000, -112.000000)">
+            <g id="Group-6" filter="url(#filter-1)" transform="translate(538.000000, 64.000000)">
+                <g id="Group-2-Copy" fill="#FFFFFF">
+                    <rect id="Rectangle-3-Copy-9" x="0" y="0" width="1016.63442" height="90"></rect>
+                </g>
+                <path d="M35.35,55.04 C34.67,51.59 31.64,49 28,49 C25.11,49 22.6,50.64 21.35,53.04 C18.34,53.36 16,55.91 16,59 C16,62.31 18.69,65 22,65 L35,65 C37.76,65 40,62.76 40,60 C40,57.36 37.95,55.22 35.35,55.04 L35.35,55.04 Z M23,58 L28,53 L33,58 L30,58 L30,62 L26,62 L26,58 L23,58 L23,58 Z" id="Shape" stroke="#282C42"></path>
+            </g>
+        </g>
+    </g>
+</svg>
