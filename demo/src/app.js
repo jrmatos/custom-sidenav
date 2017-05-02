@@ -39,7 +39,7 @@
 
 		vm.sidenavOptions = {
 			menuTitleText: 'The Menu Title',
-			menuTitleArrow: {
+			menuTitleArrowIcon: {
 				left: 'menu_title_arrow_left.svg',
 				right: 'menu_title_arrow_right.svg'
 			},
