@@ -19,7 +19,7 @@
                               ng-class="{ 'has-submenu': menuItemLevel1.menu, 'menu-expanded': menuItemLevel1.expanded, 'menu-selected': menuItemLevel1.state == vm.state }" class="menu-selected-hover">
 
                     <!-- icon -->
-                    <md-icon layout="row">
+                    <md-icon layout="row" aria-label="">
                         <img ng-src="{{ vm.options.iconsPackageUrl + menuItemLevel1.itemIcon }}" ng-show="menuItemLevel1.itemIcon">
                     </md-icon>
 
