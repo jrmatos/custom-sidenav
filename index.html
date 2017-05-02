@@ -4,13 +4,15 @@
 		<title>SIDENAV COMPONENT</title>
 		<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
 
-		<link rel="stylesheet" href="src/modules/custom-sidenav/sidenav.css">
+		<link rel="stylesheet" href="src/modules/custom-sidenav/custom-sidenav.css">
 	</head>
 	<body ng-controller="HomeCtrl as vm">
 
 		<div layout-fill flex layout="row">
 			<!-- Menu -->
-			<custom-sidenav options="vm.sidenavOptions"></custom-sidenav>
+			<custom-sidenav 
+				template-url="src/modules/custom-sidenav/custom-sidenav.html"
+				options="vm.sidenavOptions"></custom-sidenav>
 			<!-- /Menu -->
 			<!-- Main content -->
 			<md-content layout="column" layout-fill flex>
@@ -29,7 +31,7 @@
 		<!-- app scripts -->
 		<script type="text/javascript" src="src/app.js"></script>
 		<script type="text/javascript" src="src/domhelper.js"></script>
-		<script type="text/javascript" src="src/modules/custom-sidenav/sidenav.js"></script>
+		<script type="text/javascript" src="src/modules/custom-sidenav/custom-sidenav.js"></script>
 		
 	</body>
 </html>

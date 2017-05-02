@@ -3,7 +3,7 @@
 	var app = angular
 		.module('app', 
 			[
-				'sidenav-component',
+				'custom-sidenav',
 				'ui.router'
 			]);
 

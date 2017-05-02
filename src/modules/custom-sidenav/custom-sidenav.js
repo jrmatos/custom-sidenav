@@ -1,14 +1,16 @@
 (function () {
 	'use strict';
 
-	var sidenavComponent = angular.module('sidenav-component', ['ngMaterial','ngAnimate']);
+	var sidenavComponent = angular.module('custom-sidenav', ['ngMaterial','ngAnimate']);
 
 	sidenavComponent.directive('customSidenav', sideNavDirective);
 
 	function sideNavDirective(){
 		return {  
 			restrict: 'E',
-			templateUrl: 'src/modules/custom-sidenav/sidenav.html',
+			templateUrl: function(elem, attrs) {
+				return attrs.templateUrl || 'oieee'
+			},
 			scope: {
 				options: '=',
 			},
