@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	var sidenavComponent = angular.module('sidenav-component', []);
+	var sidenavComponent = angular.module('sidenav-component', ['ngMaterial','ngAnimate']);
 
 	sidenavComponent.directive('customSidenav', sideNavDirective);
 
@@ -26,8 +26,8 @@
 		vm.canOpenMenu = true;
 		vm.options = $scope.options || {};
 		vm.options.iconsPackageUrl += '/';
-		vm.state = angular.copy($state.current.name);		
-
+		vm.state = angular.copy($state.current.name);
+				
 		/*
 		* This function is used for finding sub items and select them with a border in their parent.
 		* It also removes this border for those ones who are not selected anymore
@@ -81,6 +81,8 @@
 				vm.sideMenu.collapseChildren(vm.sideMenu.items);
 				DOMHelper('md-sidenav').removeClass('sidenav-opened');
 				vm.canOpenMenu = true;
+
+				
 				return true;
 			}
 			return false

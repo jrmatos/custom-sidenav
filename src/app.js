@@ -1,16 +1,14 @@
 (function () {
 	'use strict';
-	var myApp = angular
+	var app = angular
 		.module('app', 
 			[
-				'ngMaterial',
-				'ngAnimate',
 				'sidenav-component',
 				'ui.router'
 			]);
 
-
-	myApp.config(function($stateProvider, $qProvider) {
+	app.config(function($stateProvider, $qProvider) {
+		
 		var helloState = {
 			name: 'hello',
 			url: '/hello',
@@ -29,7 +27,6 @@
 			template: '<h3>Spongebob!</h3>'
 		}
 
-
 		$stateProvider.state(helloState);
 		$stateProvider.state(aboutState);
 		$stateProvider.state(bob);
@@ -37,21 +34,14 @@
 		$qProvider.errorOnUnhandledRejections(false);
 	});
 
-	myApp.controller('HomeCtrl', function () {
+	app.controller('HomeCtrl', function () {
 		var vm = this;
-		vm.casa = 'branca';
 
 		vm.sidenavOptions = {
 			menuTitleText: 'The Menu Title',
 			menuTitleArrow: {
 				left: 'menu_title_arrow_left.svg',
 				right: 'menu_title_arrow_right.svg'
-			},
-			onMenuOpen: function () {
-				alert('onMenuOpen');
-			},
-			onMenuClose: function () {
-				alert('onMenuClose');
 			},
 			iconsPackageUrl: 'src/assets/img',
 			items: [
@@ -67,19 +57,19 @@
 						items: [
 							{
 								label: 'Produto Acabado',
-								state: 'jovem'
+								state: 'bob'
 							},
 							{
 								label: 'Item',
-								state: 'jovem'
+								state: 'bob'
 							},
 							{
 								label: 'Processo e Confirmação',
-								state: 'jovem'
+								state: 'bob'
 							},
 							{
 								label: 'Critical Parts',
-								state: 'jovem'
+								state: 'bob'
 							}
 						]
 					}
@@ -96,11 +86,11 @@
 						items: [
 							{
 								label: 'Atualização',
-								state: 'jovem'
+								state: 'bob'
 							},
 							{
 								label: 'Relatorio',
-								state: 'jovem'
+								state: 'bob'
 							},
 						]
 					}
@@ -112,48 +102,48 @@
 						items: [
 							{
 								label: 'Despesas Logísticas',
-								state: 'jovem'
+								state: 'bob'
 							},
 							{
 								label: 'Tabela Siscomex',
-								state: 'jovem'
+								state: 'bob'
 							},
 							{
 								label: 'Capatazia',
-								state: 'jovem'
+								state: 'bob'
 							},
 							{
 								label: 'Agente de Carga',
-								state: 'jovem'
+								state: 'bob'
 							},
 							{
 								label: 'Pagamentos EADI',
-								state: 'jovem'
+								state: 'bob'
 							},
 							{
 								label: 'Reembolso',
-								state: 'jovem'
+								state: 'bob'
 							},
 							{
 								label: 'Relatórios',
-								state: 'jovem',
+								state: 'bob',
 								menu: {
 									items: [
 										{
 											label: 'Custo Mensal',
-											state: 'jovem'
+											state: 'bob'
 										},
 										{
 											label: 'Parameterization',
-											state: 'jovem'
+											state: 'bob'
 										},
 										{
 											label: 'Storage Time',
-											state: 'jovem'
+											state: 'bob'
 										},
 										{
 											label: 'Process By Freight',
-											state: 'jovem'
+											state: 'bob'
 										}
 									]
 								}
@@ -173,24 +163,24 @@
                         items: [
                             {
                                 label: 'Controle de E&O',
-                                state: 'jovem'
+                                state: 'bob'
                             },
                             {
                                 label: 'Pareto',
-                                state: 'jovem'
+                                state: 'bob'
                             },
                             {
                                 label: 'Improvement Plan',
-                                state: 'jovem'
+                                state: 'bob'
                             },
                             {
                                 label: 'Relatórios',
-                                state: 'jovem',
+                                state: 'bob',
                                 menu: {
                                     items: [
                                         {
                                             label: 'Relatório 4Q',
-                                            state: 'jovem'
+                                            state: 'bob'
                                         }
                                     ]
                                 }
@@ -199,6 +189,7 @@
                     }
                 }
 			]
-		}; // sidenavOptions
+		}; 
+		// sidenavOptions
 	})
 })();
