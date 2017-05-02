@@ -44,11 +44,14 @@
 				right: 'menu_title_arrow_right.svg'
 			},
 			iconsPackageUrl: 'src/assets/img',
+			onNavigateToStateError: function () {
+				console.error('Something wrong happened!');
+			},
 			items: [
 				{
 					label: 'Upload',
 					itemIcon: 'shape.svg',
-					state: 'hello'
+					state: 'hello123213'
 				},
 				{
 					label: 'Cts Material',

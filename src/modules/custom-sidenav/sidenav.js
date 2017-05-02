@@ -24,6 +24,7 @@
 		var vm = this;		
 
 		vm.canOpenMenu = true;
+		vm.allStates = [];
 		vm.options = $scope.options || {};
 		vm.options.iconsPackageUrl += '/';
 		vm.state = angular.copy($state.current.name);
@@ -50,20 +51,6 @@
 			}, 50);
 			return _f;
 		})();
-
-		$rootScope.$on('closeMenuBroadcast', function () {
-			if(!vm.canOpenMenu && DOMHelper('md-sidenav').hasClass('sidenav-opened')) {
-				vm.sideMenu.collapseChildren(vm.sideMenu.items);
-				DOMHelper('md-sidenav').removeClass('sidenav-opened');
-				vm.canOpenMenu = true;
-			}
-		});
-
-		$rootScope.$on('openMenuBroadcast', function () {
-			if(vm.canOpenMenu && !DOMHelper('md-sidenav').hasClass('sidenav-opened')) {
-				openMenu();
-			}
-		});
 
 		var openMenu = function () {
 			if(vm.canOpenMenu && !DOMHelper('md-sidenav').hasClass('sidenav-opened')) {
@@ -93,14 +80,16 @@
 				openMenu();
 			}
 		};
-
+		
 		$rootScope.$on('$stateChangeStart', function(e, toState) {
 			vm.state = toState.name;
 			checkSelectedChildren();
 		});
 
-		
-		$rootScope.$on('$stateChangeError', vm.options.stateChangeError);	
+		console.log( vm.options.stateChangeError)
+
+		$rootScope.$on('closeMenuBroadcast', closeMenu);
+		$rootScope.$on('openMenuBroadcast', openMenu);
 
 		// // side menu object
 		vm.sideMenu = {			
@@ -117,19 +106,17 @@
 					}
 				}
 			},
-			navigateToState: function (page) {
-				// check if it's already the page we're trying to navigate to
-				if($state.current.name !== page) {
-					$state.go(page);
+			navigateToState: function (newState) {
+				// check if it's really a new state
+				if($state.current.name !== newState) {
+					try{
+						$state.go(newState);
+					}
+					catch(e) {
+						vm.options.onNavigateToStateError(e);
+					}
 				}
-				// remove class if it exists
-				if(!vm.canOpenMenu && DOMHelper('md-sidenav').hasClass('sidenav-opened')) {
-					DOMHelper('md-sidenav').removeClass('sidenav-opened');
-					$timeout(function() {
-						vm.sideMenu.collapseChildren(vm.sideMenu.items);
-					}, 100);
-					vm.canOpenMenu = true;
-				}
+				closeMenu();
 			},
 			collapseChildren: function (items) {
 				var self = this;
@@ -155,6 +142,7 @@
 				}
 				else {
 					item.click = vm.sideMenu.bindNavigateToStateClick;
+					vm.allStates.push(item.state);
 				}
 				return item;
 			},
