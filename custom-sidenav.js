@@ -26,7 +26,6 @@
 		var vm = this;		
 
 		vm.canOpenMenu = true;
-		vm.allStates = [];
 		vm.options = $scope.options || {};
 		vm.options.iconsPackageUrl += '/';
 		vm.state = angular.copy($state.current.name);
@@ -140,7 +139,6 @@
 				}
 				else {
 					item.click = vm.sideMenu.bindNavigateToStateClick;
-					vm.allStates.push(item.state);
 				}
 				return item;
 			},
