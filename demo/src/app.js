@@ -52,7 +52,7 @@
 				{
 					label: 'Upload',
 					itemIcon: 'shape.svg',
-					state: 'hello123213'
+					state: 'authenticated.home.sheet-upload',
 				},
 				{
 					label: 'Cts Material',
@@ -61,41 +61,12 @@
 						items: [
 							{
 								label: 'Produto Acabado',
-								state: 'bob'
+								state: 'authenticated.home.ctsmaterial',
 							},
 							{
 								label: 'Item',
-								state: 'bob'
-							},
-							{
-								label: 'Processo e Confirmação',
-								state: 'bob'
-							},
-							{
-								label: 'Critical Parts',
-								state: 'bob'
+								state: 'authenticated.home.ctsMaterialItem',
 							}
-						]
-					}
-				},
-				{
-					label: 'Supply demand',
-					itemIcon: 'productdev.svg',
-					state: 'bob'
-				},
-				{
-					label: 'Indicadores',
-					itemIcon: 'c-h-a-r-t-copy.svg',
-					menu: {
-						items: [
-							{
-								label: 'Atualização',
-								state: 'bob'
-							},
-							{
-								label: 'Relatorio',
-								state: 'bob'
-							},
 						]
 					}
 				},
@@ -106,92 +77,23 @@
 						items: [
 							{
 								label: 'Despesas Logísticas',
-								state: 'bob'
-							},
-							{
-								label: 'Tabela Siscomex',
-								state: 'bob'
-							},
-							{
-								label: 'Capatazia',
-								state: 'bob'
-							},
-							{
-								label: 'Agente de Carga',
-								state: 'bob'
-							},
-							{
-								label: 'Pagamentos EADI',
-								state: 'bob'
-							},
-							{
-								label: 'Reembolso',
-								state: 'bob'
+								state: 'authenticated.home.expense-list',
 							},
 							{
 								label: 'Relatórios',
-								state: 'bob',
+								state: 'authenticated.home.reembolso',
 								menu: {
 									items: [
 										{
 											label: 'Custo Mensal',
-											state: 'bob'
-										},
-										{
-											label: 'Parameterization',
-											state: 'bob'
-										},
-										{
-											label: 'Storage Time',
-											state: 'bob'
-										},
-										{
-											label: 'Process By Freight',
-											state: 'bob'
+											state: 'authenticated.home.costsbymonth',
 										}
 									]
 								}
 							}
 						]
 					}
-				},
-                {
-                    label: 'Macro Execution',
-                    itemIcon: 'macro-menu.svg',
-                    state: 'bob'
-                },
-                {
-                    label: 'E&O',
-                    itemIcon: 'analytics.svg',
-                    menu: {
-                        items: [
-                            {
-                                label: 'Controle de E&O',
-                                state: 'bob'
-                            },
-                            {
-                                label: 'Pareto',
-                                state: 'bob'
-                            },
-                            {
-                                label: 'Improvement Plan',
-                                state: 'bob'
-                            },
-                            {
-                                label: 'Relatórios',
-                                state: 'bob',
-                                menu: {
-                                    items: [
-                                        {
-                                            label: 'Relatório 4Q',
-                                            state: 'bob'
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                }
+				}			    
 			]
 		}; 
 		// sidenavOptions

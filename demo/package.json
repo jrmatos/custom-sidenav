@@ -1,5 +1,5 @@
 {
-  "name": "sidenav-component",
+  "name": "custom-sidenav",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jrmatos/sidenav-component.git"
+    "url": "git+https://github.com/jrmatos/custom-sidenav.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jrmatos/sidenav-component/issues"
+    "url": "https://github.com/jrmatos/custom-sidenav/issues"
   },
-  "homepage": "https://github.com/jrmatos/sidenav-component#readme"
+  "homepage": "https://github.com/jrmatos/custom-sidenav#readme"
 }
