@@ -28,7 +28,7 @@
 		vm.options = $scope.options || {};
 		vm.options.iconsPackageUrl += '/';
 		vm.state = angular.copy($state.current.name);
-				
+
 		/*
 		* This function is used for finding sub items and select them with a border in their parent.
 		* It also removes this border for those ones who are not selected anymore
@@ -150,6 +150,12 @@
 		};
 
 		vm.sideMenu.items = vm.options.items.map(vm.sideMenu.mapItemsWithClick);
+
+		if(vm.options.clickOutsideToClose) {
+			document.querySelector('custom-sidenav').nextElementSibling.addEventListener('click', function () {
+				closeMenu();
+			});
+		}
 
 	}
 

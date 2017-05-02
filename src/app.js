@@ -44,6 +44,7 @@
 				right: 'menu_title_arrow_right.svg'
 			},
 			iconsPackageUrl: 'src/assets/img',
+			clickOutsideToClose: true,
 			onNavigateToStateError: function () {
 				console.error('Something wrong happened!');
 			},
