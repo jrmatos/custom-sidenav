@@ -9,7 +9,7 @@
 		return {  
 			restrict: 'E',
 			templateUrl: function(elem, attrs) {
-				return attrs.templateUrl || 'oieee'
+				return attrs.templateUrl || 'custom-sidenav.html'
 			},
 			scope: {
 				options: '=',
@@ -70,8 +70,6 @@
 				vm.sideMenu.collapseChildren(vm.sideMenu.items);
 				DOMHelper('md-sidenav').removeClass('sidenav-opened');
 				vm.canOpenMenu = true;
-
-				
 				return true;
 			}
 			return false
@@ -154,6 +152,7 @@
 		if(vm.options.clickOutsideToClose) {
 			document.querySelector('custom-sidenav').nextElementSibling.addEventListener('click', function () {
 				closeMenu();
+				$scope.$apply();
 			});
 		}
 
