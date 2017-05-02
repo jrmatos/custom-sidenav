@@ -8,7 +8,7 @@
 	function sideNavDirective(){
 		return {  
 			restrict: 'E',
-			templateUrl: 'src/modules/sidenav-component/sidenav.html',
+			templateUrl: 'src/modules/custom-sidenav/sidenav.html',
 			scope: {
 				options: '=',
 			},
@@ -85,8 +85,6 @@
 			vm.state = toState.name;
 			checkSelectedChildren();
 		});
-
-		console.log( vm.options.stateChangeError)
 
 		$rootScope.$on('closeMenuBroadcast', closeMenu);
 		$rootScope.$on('openMenuBroadcast', openMenu);
