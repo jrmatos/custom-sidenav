@@ -54,23 +54,29 @@
 					itemIcon: 'shape.svg',
 					state: 'authenticated.home.sheet-upload',
 				},
+                // The difference here is that now we have to define an [id] to a item, in case it has children.
 				{
+					id: 'cts-material',
 					label: 'Cts Material',
 					itemIcon: 'analytics.svg',
 					menu: {
 						items: [
+                            // It's child also has to define a [parentId], so we can find it's parent.
 							{
 								label: 'Produto Acabado',
 								state: 'authenticated.home.ctsmaterial',
+								parentId: 'cts-material'
 							},
 							{
 								label: 'Item',
 								state: 'authenticated.home.ctsMaterialItem',
+                                parentId: 'cts-material'
 							}
 						]
 					}
 				},
 				{
+					id: 'logistic_tool',
 					label: 'Logistic Tool',
 					itemIcon: 'globe.svg',
 					menu: {
@@ -78,15 +84,19 @@
 							{
 								label: 'Despesas Logísticas',
 								state: 'authenticated.home.expense-list',
+								parentId: 'logistic_tool'
 							},
 							{
+								id: 'relatorios_logistic',
 								label: 'Relatórios',
 								state: 'authenticated.home.reembolso',
+								parentId: "logistic_tool",
 								menu: {
 									items: [
 										{
 											label: 'Custo Mensal',
 											state: 'authenticated.home.costsbymonth',
+											parentId: 'relatorios_logistic'
 										}
 									]
 								}
